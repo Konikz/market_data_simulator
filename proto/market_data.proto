@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package marketdata;
+
+// Message for an order book update
+message OrderBookUpdate {
+  string instrument_id = 1;
+  repeated float bid_prices = 2;
+  repeated float ask_prices = 3;
+}
+
+// Message for client subscription requests
+message SubscriptionRequest {
+  string instrument_id = 1;
+}
+
+// gRPC service definition
+service MarketDataService {
+  // Server streams order book updates based on a subscription request
+  rpc Subscribe(SubscriptionRequest) returns (stream OrderBookUpdate);
+}

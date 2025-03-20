@@ -1,0 +1,12 @@
+[
+    {
+      "instrument_id": "AAPL",
+      "symbol": "Apple Inc.",
+      "contract_specs": "Some contract details..."
+    },
+    {
+      "instrument_id": "GOOG",
+      "symbol": "Alphabet Inc.",
+      "contract_specs": "Some contract details..."
+    }
+  ]
